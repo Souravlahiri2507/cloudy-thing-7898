@@ -15,16 +15,6 @@ const Button = styled.button`
 const ImageSlider = () => {
     const [activeItemIndex, setActiveItemIndex] = useState(0);
     const carouselRef = useRef();
-  
-    const next = () => {
-      if (activeItemIndex + 1 <= SliderData.length - 1) {
-        carouselRef.current.goTo(activeItemIndex + 1);
-        setActiveItemIndex(activeItemIndex + 1);
-      } else if (activeItemIndex + 1 === SliderData.length) {
-        setActiveItemIndex(0);
-        carouselRef.current.goTo(0);
-      }
-    };
     
     return (
       <div style={{width: "950px", height: "450px"}}>
